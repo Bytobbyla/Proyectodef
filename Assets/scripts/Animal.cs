@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    [SerializeField] float speed;
+    [SerializeField] float speed, activar;
     [SerializeField] int vidas;
     [SerializeField] bool movingRight;
-    float minX, maxX;
-    int contador = 3;
-    float tiempo = 5f;
+    float minX, maxX, copiat, nextPower;
+    int repetidor = 3;
+    float tiempo = 50f;
     int copia;
     bool active;
     // Start is called before the first frame update
     void Start()
     {
         copia = vidas;
+        copiat = tiempo;
         
         Vector2 esquinaInfDer = Camera.main.ViewportToWorldPoint(new Vector2(1, 0));
         Vector2 esquinaInfIzq = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
@@ -29,23 +30,7 @@ public class Animal : MonoBehaviour
     {
         
         tiempo -= Time.deltaTime;
-        if (contador >= 1)
-        {
-            
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Time.timeScale = 0.5f;
-                vidas = 1;
-            }
-            if (tiempo <= 0)
-            {
-                Time.timeScale = 1f;
-                contador--;
-                tiempo = 5f;
-                vidas = copia;
-            }
-            
-        }
+        poder();
         
         if (movingRight)
         {
@@ -69,6 +54,28 @@ public class Animal : MonoBehaviour
             movingRight = true;
         }
         }
+    public void poder()
+    {
+        if (repetidor >= 1)
+        {
+
+            if (Input.GetKeyDown(KeyCode.E) && Time.time >= nextPower)
+            {
+                nextPower = Time.time + activar;
+                tiempo = 2.4f;
+                Time.timeScale = 0.5f;
+                vidas = 1;
+            }
+            if (tiempo <= 0)
+            {
+                Time.timeScale = 1f;
+                tiempo = copiat;
+                vidas = copia;
+                repetidor--;
+            }
+
+        }
+    }
    
     private void OnCollisionEnter2D(Collision2D collision)
     {

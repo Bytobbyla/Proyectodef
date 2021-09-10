@@ -1241,6 +1241,14 @@ PrefabInstance:
       propertyPath: vidas
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2272096281608776457, guid: de9fc10cabe504d488b177104e22e9dc, type: 3}
+      propertyPath: activar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272096281608776457, guid: de9fc10cabe504d488b177104e22e9dc, type: 3}
+      propertyPath: segundos
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2272096281608776460, guid: de9fc10cabe504d488b177104e22e9dc, type: 3}
       propertyPath: m_Name
       value: dog
@@ -1494,6 +1502,14 @@ PrefabInstance:
     - target: {fileID: 1870197921644919497, guid: a108f403665068643bfcd60e0d1d3179, type: 3}
       propertyPath: vidas
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870197921644919497, guid: a108f403665068643bfcd60e0d1d3179, type: 3}
+      propertyPath: activar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870197921644919497, guid: a108f403665068643bfcd60e0d1d3179, type: 3}
+      propertyPath: segundos
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1870197921644919500, guid: a108f403665068643bfcd60e0d1d3179, type: 3}
       propertyPath: m_Name
@@ -2400,6 +2416,14 @@ PrefabInstance:
     - target: {fileID: 1756626784750251263, guid: 51e59f1e0d8100541aa166e67c92c187, type: 3}
       propertyPath: vidas
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756626784750251263, guid: 51e59f1e0d8100541aa166e67c92c187, type: 3}
+      propertyPath: activar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756626784750251263, guid: 51e59f1e0d8100541aa166e67c92c187, type: 3}
+      propertyPath: segundos
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51e59f1e0d8100541aa166e67c92c187, type: 3}
